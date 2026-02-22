@@ -2,7 +2,12 @@
 
 ## Project Overview
 
-add description here
+**claw-b** is a thin Rust client library for the Polymarket trading API. It provides four focused layers:
+
+- **HTTP** (`src/http.rs`) — `reqwest`-based GET/POST/DELETE calls against the Polymarket REST API
+- **EIP-712 signing** (`src/signing.rs`) — L1 authentication and order signing via `alloy`
+- **HMAC-SHA256 auth** (`src/auth.rs`) — L2 request header generation using `hmac` + `sha2`
+- **Types** (`src/types.rs`) — `serde` request/response bodies for the Polymarket API
 
 ## Version Bumping (mandatory)
 
